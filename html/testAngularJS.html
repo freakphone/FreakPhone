@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html ng-app="gemStore">
   <head>
-    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
-    <script type="text/javascript" src="angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.1/custom/bootstrap.min.css"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
   </head>
   <body ng-controller="StoreController as store">
     <header>
       <h1 class="text-center">Flatlander Crafted Gems</h1>
-      <h2 class="text-center">– an Angular store –</h2>
+      <h2 class="text-center"> an Angular store </h2>
     </header>
     <div class="list-group">
       <div class="list-group-item" ng-repeat="product in store.products">
         <h3>{{product.name}} <em class="pull-right">{{product.price | currency}}</em></h3>
-        <div ng-controller="GalleryController as gallery"  ng-show="product.images.length">
+        <div ng-controller="GalleryController as gallery" ng-show="product.images.length">
           <div class="img-wrap">
             <img ng-src="{{product.images[gallery.current]}}" />
           </div>
