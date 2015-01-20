@@ -2,6 +2,7 @@
 <html ng-app="gemStore">
   <head>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="application.css"/>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
@@ -52,7 +53,7 @@
                 <blockquote>
                   <strong>{{review.stars}} Stars</strong>
                   {{review.body}}
-                  <cite class="clearfix">—{{review.author}} on {{review.createdOn | date}}</cite>
+                  <cite class="clearfix">{{review.author}} on {{review.createdOn | date}}</cite>
                 </blockquote>
               </li>
             </ul>
@@ -64,7 +65,7 @@
               <blockquote>
                 <strong>{{reviewCtrl.review.stars}} Stars</strong>
                 {{reviewCtrl.review.body}}
-                <cite class="clearfix">—{{reviewCtrl.review.author}}</cite>
+                <cite class="clearfix">{{reviewCtrl.review.author}}</cite>
               </blockquote>
 
               <!--  Review Form -->
