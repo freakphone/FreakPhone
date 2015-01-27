@@ -1,5 +1,6 @@
 (function() {
-  var app = angular.module('gemStore', ['store-directives']);
+    var app;
+    app = angular.module('gemStore', ['store-directives']);
 
   app.controller('StoreController', ['$http', function($http){
     //besoin de cette variable comme dans java
@@ -9,8 +10,11 @@
     store.products = [];
     //recup donnée de json automatiquement transformer en liste par la fonctionne $http
     // il existe d'autre avec $ devan comme $log etc.
-    $http('/Users/djemi/Documents/FreakPhone/html/store-products.json').success(function(data){
+    $http('/store-products.json').success(function(data){
       store.products = data;
+    });
+    $http('/store-products.json').error(function($log){
+      $log
     });
   }]);
 
