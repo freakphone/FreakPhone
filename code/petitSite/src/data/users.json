@@ -1,0 +1,50 @@
+[
+  {
+    "nom": "Zecevic",
+    "prenom": "Djemi",
+    "loginName": "zeki",
+    "droit": "A",
+    "email": "zeki@gmail.com",
+    "password" : "yes"
+  },
+  {
+    "nom": "Schoenbaechler",
+    "prenom": "Jan",
+    "loginName": "pilote",
+    "droit": "U",
+    "email": "pilot@gmail.com",
+    "password" : "yes"
+  },
+  {
+    "nom": "Bette",
+    "prenom": "Enea",
+    "loginName": "super",
+    "droit": "U",
+    "email": "super@gmail.com",
+    "password" : "yes"
+  },
+  {
+    "nom": "Halter",
+    "prenom": "Daniel",
+    "loginName": "dani",
+    "droit": "U",
+    "email": "dani@gmail.com",
+    "password" : "yes"
+  },
+  {
+      "nom": "Jaquet",
+    "prenom": "Pierre",
+    "loginName": "pierre",
+    "droit": "U",
+    "email": "pierre@gmail.com",
+    "password" : "yes"
+  },
+  {
+    "nom": "Zecevic",
+    "prenom": "Cila",
+    "loginName": "cic",
+    "droit": "A",
+    "email": "cici@gmail.com",
+    "password" : "yes"
+  }
+]

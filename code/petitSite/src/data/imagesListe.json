@@ -1,0 +1,38 @@
+[
+  {
+    "imagesIndex": [
+      "../assets/img/gem-02.gif", -> voir comment ajouter le root du projet pour automatiser l emplacement à la place du
+      "../img/gem-05.gif",
+      "../img/gem-09.gif",
+      "../img/gem-01.gif",
+      "../img/gem-03.gif",
+      "../img/gem-04.gif",
+      "../img/gem-06.gif",
+      "../img/gem-07.gif",
+      "../img/gem-08.gif"
+    ]
+  },
+  {
+    "imagesHead": [
+      "../img/gem-01.gif",
+      "../img/gem-03.gif",
+      "../img/gem-04.gif"
+    ]
+  },
+  {
+    "imagesGallery": [
+      "../img/gem-06.gif",
+      "../img/gem-07.gif",
+      "../img/gem-08.gif",
+      "../img/gem-06.gif",
+      "../img/gem-07.gif",
+      "../img/gem-08.gif",
+      "../img/gem-06.gif",
+      "../img/gem-07.gif",
+      "../img/gem-08.gif",
+      "../img/gem-06.gif",
+      "../img/gem-07.gif",
+      "../img/gem-08.gif",
+    ]
+  }
+]
