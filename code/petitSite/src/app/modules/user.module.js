@@ -3,20 +3,15 @@
  */
 (function() {
     var app = angular.module("login", []);
-    app.directive("", function() {
+
+    app.directive("loginPage", function() {
         return {
             restrict: 'E',
-            templateUrl: "product-description.html"
+            templateUrl: "login.tmpl.html"
         };
     });
 
-    app.directive("productReviews", function() {
-        return {
-            restrict: 'E',
-            templateUrl: "product-reviews.html"
-        };
-    });
-
+    // exemple to use
     app.directive("productSpecs", function() {
         return {
             restrict:"A",
