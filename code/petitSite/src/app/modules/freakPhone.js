@@ -4,8 +4,8 @@
 (function(){
    var freakPhone = angular.module("freakPhone", ['login']); // ajouter d'autre module
 
-    app.controller('LoginController', function(user, password) {
+    app.controller("LoginController", ['$http', function($http) {
             var login = "";
             return login;
-        });
+        }]);
 });
