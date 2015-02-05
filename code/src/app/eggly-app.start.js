@@ -6,8 +6,7 @@ angular.module('Eggly', [
             {"id": 0, "name": "Development"},
             {"id": 1, "name": "Design"},
             {"id": 2, "name": "Exercise"},
-            {"id": 3, "name": "Humor"},
-            {"id": 4, "name": "Drone"}
+            {"id": 3, "name": "Humor"}
         ];
 
         $scope.bookmarks = [
@@ -20,7 +19,6 @@ angular.module('Eggly', [
             {"id": 6, "title": "Senor Gif", "url": "http://memebase.cheezburger.com/senorgif", "category": "Humor" },
             {"id": 7, "title": "Wimp", "url": "http://wimp.com", "category": "Humor" },
             {"id": 8, "title": "Dump", "url": "http://dump.com", "category": "Humor" },
-            {"id": 9, "title": "Skyrec", "url": "http://www.skyrec.ba", "category": "Drone" }
         ];
 
         $scope.isCreating = false;

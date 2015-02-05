@@ -10,10 +10,10 @@
     store.products = [];
     //recup donnée de json automatiquement transformer en liste par la fonctionne $http
     // il existe d'autre avec $ devan comme $log etc.
-    $http('/store-products.json').success(function(data){
+    $http('store-products.json').success(function(data){
       store.products = data;
     });
-    $http('/store-products.json').error(function($log){
+    $http('store-products.json').error(function($log){
       $log
     });
   }]);
