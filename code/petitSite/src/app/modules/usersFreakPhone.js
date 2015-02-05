@@ -7,7 +7,7 @@
     app.directive("loginPage", function() {
         return {
             restrict: 'E',
-            templateUrl: "app/Directives/login-tmpl.html"
+            templateUrl: "Directives/login-tmpl.html"
         }
     })
 })();

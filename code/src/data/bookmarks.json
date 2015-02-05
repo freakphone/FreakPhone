@@ -8,5 +8,7 @@
     {"id":6, "title": "Senor Gif", "url": "http://memebase.cheezburger.com/senorgif", "category": "Humor" },
     {"id":7, "title": "Wimp", "url": "http://wimp.com", "category": "Humor" },
     {"id":8, "title": "Dump", "url": "http://dump.com", "category": "Humor" },
-    {"id":9, "title": "Skyrec", "url": "http://www.skyrec.ba", "category": "Drone" }
+    {"id":9, "title": "Skyrec", "url": "http://www.skyrec.ba", "category": "Drone" },
+    {"id":10, "title": "Jan", "url": "http://www.jan.ch", "category": "Drone" },
+    {"id":11, "title": "Test", "url": "http://www.test.ch", "category": "Drone" }
 ]
