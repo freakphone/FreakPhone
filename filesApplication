@@ -1,0 +1,39 @@
+app/ 							-> files of the application
+	css/ 						-> css files
+		app.css 				-> default stylesheet
+	js/							-> javascript application components
+    	controllers/			-> controllers directory
+      		loginCtrl.js 		-> login controller
+      		parkingCtrl.js 		-> parking controller
+      		carCtrl.js 			-> car controller
+    	directives/				-> directives directory
+    	filters/				-> filters directory
+    	services/				-> services directory
+    	app.js 					-> main application script
+  	lib/ 						-> javascript libraries
+    	angular.js 				-> AngularJS script
+  	partials/  					-> partial view directory
+    	login.html 				-> login view
+    	parking.html 			-> parking view
+    	car.html 				-> car view
+	index.html					-> main html file
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+/**
+ * Created by djemi on 07.02.15.
+ */
+angular.module('appPrime',[
+    'ui.router',
+    'menus'
+])
+    .config(function($stateProvider, $urlRouterProvider){
+        $stateProvider.state('app', {
+            url:'',
+            abstract:true
+        });
+        $urlRouterProvider.otherwise('/');
+    });
+
+    .config(function($stateProvider){
+            $stateProvider.state('app', {
+                url:'/',
+                templateUrl: 'menus/menus.tmpl.html',
+                controller: 'MainCtrl'
+            });
+        });
+
+
+-------------
+<script type="text/javascript" src="app/menus/menus.js"></script>
+    <script type="text/javascript" src="app/common/models/menu-model.js"></script>
+
+------
+fonctionne :
+  <div class="container-fluid" ng-include="'app/menus/menus-tmpl.html'"></div>
