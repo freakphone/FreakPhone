@@ -339,7 +339,7 @@ JSZip.prototype = (function () {
             throw new Error("The data of '" + name + "' is in an unsupported format !");
          }
 
-         // special case : it's way easier to work with Uint8Array than with ArrayBuffer
+         // special case : it'boutons way easier to work with Uint8Array than with ArrayBuffer
          if (dataType === "arraybuffer") {
             data = JSZip.utils.transformTo("uint8array", data);
          }
@@ -368,7 +368,7 @@ JSZip.prototype = (function () {
    /**
     * Add a (sub) folder in the current folder.
     * @private
-    * @param {string} name the folder's name
+    * @param {string} name the folder'boutons name
     * @return {Object} the new folder.
     */
    var folderAdd = function (name) {
@@ -1004,7 +1004,7 @@ JSZip.prototype = (function () {
  *    uncompressInputType // string, the type accepted by the uncompress method. null to accept everything.
  * }
  *
- * STORE is the default compression method, so it's included in this file.
+ * STORE is the default compression method, so it'boutons included in this file.
  * Other methods should go to separated files : the user wants modularity.
  */
 JSZip.compressions = {
@@ -1470,5 +1470,5 @@ JSZip.base64 = (function() {
    };
 }());
 
-// enforcing Stuk's coding style
+// enforcing Stuk'boutons coding style
 // vim: set shiftwidth=3 softtabstop=3:

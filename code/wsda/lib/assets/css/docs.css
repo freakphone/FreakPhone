@@ -10,7 +10,7 @@
 
 /*
  * Bootstrap Documentation
- * Special styles for presenting Bootstrap's documentation and code examples.
+ * Special styles for presenting Bootstrap'boutons documentation and code examples.
  *
  * Table of contents:
  *
@@ -289,7 +289,7 @@ body {
 /*
  * Page headers
  *
- * Jumbotron-esque headers at the top of every page that's not the homepage.
+ * Jumbotron-esque headers at the top of every page that'boutons not the homepage.
  */
 
 /* Page headers */
@@ -512,7 +512,7 @@ body {
  * sections of docs content.
  */
 
-/* By default it's not affixed in mobile views, so undo that */
+/* By default it'boutons not affixed in mobile views, so undo that */
 .bs-sidebar.affix {
   position: static;
 }
@@ -1385,7 +1385,7 @@ h1[id] {
 
 /* Pseudo :focus state for showing how it looks in the docs */
 #focusedInput {
-  border-color: rgb(204,204,204); /* Restate unfocused value to make CSSLint happy that there's a pre-CSS3 fallback*/
+  border-color: rgb(204,204,204); /* Restate unfocused value to make CSSLint happy that there'boutons a pre-CSS3 fallback*/
   border-color: rgba(82,168,236,.8);
   outline: 0;
   outline: thin dotted \9; /* IE6-9 */
