@@ -1,1 +1,1 @@
-WSDA for web site dynamique angularJS by Djemi and Jan
+WSDA for web site dynamic angularJS by Djemi and Jan
