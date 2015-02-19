@@ -1,24 +1,23 @@
-<section>
+<section ng-controller="BoutonCtrl as bouton">
     <ul class="nav nav-pills">
-        <li ng-class="{ active:tab.isSet(1) }">
-            <a href ng-click="tab.setTab(1)">Bouton 1</a>
+        <li ng-class="{ active:bouton.isSet(1) }">
+            <a href ng-click="bouton.setTab(1)">Bouton 1</a>
         </li>
-        <li ng-class="{ active:tab.isSet(2) }">
-            <a href ng-click="tab.setTab(2)">Bouton 2</a>
+        <li ng-class="{ active:bouton.isSet(2) }">
+            <a href ng-click="bouton.setTab(2)">Bouton 2</a>
         </li>
-        <li ng-class="{ active:tab.isSet(3) }">
-            <a href ng-click="tab.setTab(3)">Bouton 3</a>
+        <li ng-class="{ active:bouton.isSet(3) }">
+            <a href ng-click="bouton.setTab(3)">Bouton 3</a>
         </li>
     </ul>
 
     <!--  Description Tab'boutons Content  -->
-    <div ng-show="tab.isSet(1)" ng-include="'view/view01-tmpl.html'">
+    <div ng-show="bouton.isSet(1)" ng-include="'src/app/views/view01-tmpl.html'">
     </div>
 
     <!--  Spec Tab'boutons Content  -->
-    <div product-specs ng-show="tab.isSet(2)" ng-include="'view/view02-tmpl.html'"></div>
+    <div ng-show="bouton.isSet(2)" ng-include="'src/app/views/view02-tmpl.html'"></div>
 
     <!--  Review Tab'boutons Content  -->
-    <product-reviews ng-show="tab.isSet(3)" ng-include="'view/view03-tmpl.html'"></product-reviews>
-
+    <div ng-show="bouton.isSet(3)" ng-include="'src/app/views/view03-tmpl.html'"></div>
 </section>

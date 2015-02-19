@@ -3,16 +3,13 @@
  */
 angular.module('appMain', [
     'ui.router',
-    'ui.bootstrap',
-    'ngAnimate',
     'bouton'
 ])
     .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state('home', {
-            url: '',
+            url: '/',
             abstract: true
-        })
-    ;
+        });
     $urlRouterProvider.otherwise('/');
 });
