@@ -12,12 +12,12 @@
     </ul>
 
     <!--  Description Tab'boutons Content  -->
-    <div ng-show="bouton.isSet(1)" ng-include="'src/app/views/view01-tmpl.html'">
+    <div ng-show="bouton.isSet(1)" ui-view="bouton1">
     </div>
 
     <!--  Spec Tab'boutons Content  -->
-    <div ng-show="bouton.isSet(2)" ng-include="'src/app/views/view02-tmpl.html'"></div>
+    <div ng-show="bouton.isSet(2)" ui-view="bouton2"></div>
 
     <!--  Review Tab'boutons Content  -->
-    <div ng-show="bouton.isSet(3)" ng-include="'src/app/views/view03-tmpl.html'"></div>
+    <div ng-show="bouton.isSet(3)" ui-view="bouton3"></div>
 </section>

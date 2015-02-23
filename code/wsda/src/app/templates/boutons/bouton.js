@@ -5,12 +5,20 @@ angular.module('bouton', [])
 
     .config(function ($stateProvider) {
     $stateProvider
-        .state('bouton', {
+        .state('boutons', {
             url: '/',
             views: {
                 'boutons@': {
                     controller: 'BoutonCtrl',
                     templateUrl: 'src/app/templates/boutons/bouton-tmpl.html'
+                }
+            }
+        })
+        .state('bouton1',{
+            url:'/',
+            views:{
+                'bouton1@boutons' :{
+                    templateUrl:'src/app/views/view01-tmpl.html'
                 }
             }
         });
