@@ -1,0 +1,34 @@
+[
+	{
+		"name": "China",
+		"id"  : 1
+	},
+	{
+		"name": "India",
+		"id"  : 2
+	},
+	{
+		"name": "United States of America",
+		"id"  : 3
+	},
+	{
+		"name": "United Arab Emirates",
+		"id"  : 4
+	},
+	{
+		"name": "Singapore",
+		"id"  : 5
+	},
+	{
+		"name": "Philippines",
+		"id"  : 6
+	},
+	{
+		"name": "Holy See",
+		"id"  : 7
+	},
+	{
+		"name": "Switzerland",
+		"id"  : 8
+	}
+]

@@ -1,0 +1,76 @@
+<html ng-app="countryApp">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Example 46 using ui-router</title>
+		<!--script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js"></script-->
+		<script src="lib/angular.min.js"></script>
+		<script src="lib/angular-ui-router.min.js"></script>
+		<script src="lib/my-angular-locale_fr-ch.js"></script>
+		<script>
+			var countryApp = angular.module('countryApp', ['ui.router']);
+
+			countryApp.config(function ($stateProvider, $urlRouterProvider) {
+				$urlRouterProvider.otherwise('/liste');
+				$stateProvider
+				.state('liste', {
+					url: '/liste',
+					templateUrl: 'country-list.html',
+					controller: 'CountryListCtrl'
+				})
+				 
+				.state('country', {
+					url: '/country/:countryId',
+					templateUrl: 'country-detail.html',
+					controller: 'CountryDetailCtrl'
+				}); 
+			});
+
+			countryApp.factory('countriesSvc', function($http) {
+                var svc = {};
+				svc.list = function (callback) {
+                    $http({
+                        method: 'GET',
+                        url: 'countries.json',
+                        cache: true
+                    }).success(callback);
+                };
+                svc.find = function(countryId, callback) {
+                    $http({
+                        method: 'GET',
+                        url: 'country_' + countryId + '.json',
+                        cache: true
+                    }).success(callback);
+                };
+                return svc;
+            });
+
+			countryApp.directive('country', function() {
+				return {
+					scope: {
+						country: '='
+					},
+					restrict: 'A',
+					templateUrl: 'country.html'
+				};
+			});
+			
+			countryApp.controller('CountryListCtrl', function ($scope, countriesSvc){
+                countriesSvc.list(function(countries) {
+					$scope.countries = countries;
+				});
+			});
+
+			countryApp.controller('CountryDetailCtrl', function ($scope, $stateParams, countriesSvc) {
+                countriesSvc.find($stateParams.countryId, function(country) {
+					$scope.country = country;
+				});
+			});
+
+		</script>
+	</head>
+	<body>
+		<div ui-view>Initial content</div>
+        <hr/>
+        <a ui-sref="liste">*BACK*</a>
+	</body>
+</html>
