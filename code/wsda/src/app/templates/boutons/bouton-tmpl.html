@@ -1,4 +1,4 @@
-<section ng-controller="BoutonCtrl as bouton">
+<section>
     <ul class="nav nav-pills">
         <li ng-class="{ active:bouton.isSet(1) }">
             <a href ng-click="bouton.setTab(1)">Bouton 1</a>
@@ -9,15 +9,25 @@
         <li ng-class="{ active:bouton.isSet(3) }">
             <a href ng-click="bouton.setTab(3)">Bouton 3</a>
         </li>
+        <li ng-class="{ active:bouton.isSet(4) }">
+            <a href ng-click="bouton.setTab(4)">Popup</a>
+        </li>
+        <li ng-class="{ active:bouton.isSet(5) }">
+            <a href ng-click="bouton.setTab(5)">Popup 01</a>
+        </li>
     </ul>
 
     <!--  Description Tab'boutons Content  -->
-    <div ng-show="bouton.isSet(1)" ui-view="bouton1">
-    </div>
+    <div ng-show="bouton.isSet(1)" ui-view="bouton1"></div>
 
     <!--  Spec Tab'boutons Content  -->
     <div ng-show="bouton.isSet(2)" ui-view="bouton2"></div>
 
     <!--  Review Tab'boutons Content  -->
     <div ng-show="bouton.isSet(3)" ui-view="bouton3"></div>
+
+    <div ng-show="bouton.isSet(4)" ui-view="popup"></div>
+
+    <div ng-show="bouton.isSet(5)" ui-view="popup01"></div>
+
 </section>

@@ -8,7 +8,7 @@ angular.module('appMain', [
     .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state('home', {
-            url: '^',// absolute route
+            url: '',// absolute route
             abstract: true
         });
     $urlRouterProvider.otherwise('/');
