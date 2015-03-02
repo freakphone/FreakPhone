@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="SiblingViews">
+    <head>
+        <title>AngularJS Sibling Views</title>
+
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" type="text/css" rel="stylesheet" href="lib/css/sibling.css"/>
+
+    </head>
+
+    <body>
+
+    ￼￼  <header ui-view="header"></header>
+        <nav ui-view="nav"></nav>
+        <section ui-view="body"></section>
+        <footer ui-view="footer"></footer>
+
+    <script type="text/javascript" src="lib/js/jquery.js"></script>
+    <script type="text/javascript" src="lib/js/angular.js"></script>
+    <script type="text/javascript" src="lib/js/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="app/sibling.js"></script>
+
+    </body>
+
+</html>
