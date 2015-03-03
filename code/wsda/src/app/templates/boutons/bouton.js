@@ -78,12 +78,12 @@ angular.module('bouton', ['ui.bootstrap', 'popup01', 'popup02'])
 
     .controller('ModalDemoCtrl', function ($scope, $modal, $log) {
 
-        $scope.items = ['item1', 'item2', 'item3'];
+        $scope.items = ['Jan', 'Enea', 'Djemi']; // peut être fichier json ou db ou xml
 
         $scope.open = function (size) {
 
             var modalInstance = $modal.open({
-                templateUrl: 'src/app/templates/popup/popup-temp03.html',
+                templateUrl: 'popupContent.html',
                 controller: 'ModalInstanceCtrl',
                 size: size,
                 resolve: {
