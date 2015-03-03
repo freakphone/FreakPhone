@@ -15,6 +15,9 @@
         <li ng-class="{ active:bouton.isSet(5) }">
             <a href ng-click="bouton.setTab(5)">Popup 01</a>
         </li>
+        <li ng-class="{ active:bouton.isSet(6) }">
+            <a href ng-click="bouton.setTab(6)">Popup 02</a>
+        </li>
     </ul>
 
     <!--  Description Tab'boutons Content  -->
@@ -29,5 +32,7 @@
     <div ng-show="bouton.isSet(4)" ui-view="popup"></div>
 
     <div ng-show="bouton.isSet(5)" ui-view="popup01"></div>
+
+    <div ng-show="bouton.isSet(6)" ui-view="popup02"></div>
 
 </section>

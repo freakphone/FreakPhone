@@ -1,5 +1,5 @@
 angular.module('Eggly', [
-  'tngAnimae',
+  'ngAnimate',
   'ui.router',
   'categories',
   'bookmarks'

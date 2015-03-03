@@ -2,6 +2,7 @@
  * Created by djemi on 02.03.15.
  */
 angular.module('popup01', ['ui.bootstrap'])
+
     .controller('AccordionDemoCtrl', function ($scope) {
     $scope.oneAtATime = true;
 

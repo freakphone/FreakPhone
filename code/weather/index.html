@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="Weather">
+<head>
+    <title>Weather</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="lib/css/weather.css"/>
+    <script type="text/javascript" src="lib/js/angular.js"></script>
+    <script type="text/javascript" src="lib/js/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="app/weather.js"></script>
+</head>
+<body>
+    <h1>Weather</h1>
+    <div id="links">
+        <!-- ui-sref values are state names, not paths -->
+        <a ui-sref="hourly">Hourly Forecast</a>
+        <a ui-sref="daily">5-day Forecast</a>
+    </div>
+    <div ui-view></div>
+</body>
+</html>

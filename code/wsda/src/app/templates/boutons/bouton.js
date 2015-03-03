@@ -1,7 +1,7 @@
 /**
  * Created by djemi on 14.02.15.
  */
-angular.module('bouton', ['ui.bootstrap', 'popup01'])
+angular.module('bouton', ['ui.bootstrap', 'popup01', 'popup02'])
 
     .config(function ($stateProvider) {
     $stateProvider
@@ -24,6 +24,10 @@ angular.module('bouton', ['ui.bootstrap', 'popup01'])
                 'popup01@boutons' :{
                     templateUrl:'src/app/templates/popup/popup-temp02.html',
                     controller:'AccordionDemoCtrl'
+                },
+                'popup02@boutons' :{
+                    templateUrl:'src/app/templates/popup/popup-temp03.html',
+                    controller:'ModalDemoCtrl'
                 }
             }
         })
@@ -72,29 +76,27 @@ angular.module('bouton', ['ui.bootstrap', 'popup01'])
             }
         }])
 
-    .controller('AccordionDemoCtrl', function ($scope) {
-        $scope.oneAtATime = true;
+    .controller('ModalDemoCtrl', function ($scope, $modal, $log) {
 
-        $scope.groups = [
-            {
-                title: 'Dynamic Group Header - 1',
-                content: 'Dynamic Group Body - 1'
-            },
-            {
-                title: 'Dynamic Group Header - 2',
-                content: 'Dynamic Group Body - 2'
-            }
-        ];
+        $scope.items = ['item1', 'item2', 'item3'];
 
-        $scope.items = ['Item 1', 'Item 2', 'Item 3'];
+        $scope.open = function (size) {
 
-        $scope.addItem = function() {
-            var newItemNo = $scope.items.length + 1;
-            $scope.items.push('Item ' + newItemNo);
-        };
+            var modalInstance = $modal.open({
+                templateUrl: 'src/app/templates/popup/popup-temp03.html',
+                controller: 'ModalInstanceCtrl',
+                size: size,
+                resolve: {
+                    items: function () {
+                        return $scope.items;
+                    }
+                }
+            });
 
-        $scope.status = {
-            isFirstOpen: true,
-            isFirstDisabled: false
+            modalInstance.result.then(function (selectedItem) {
+                $scope.selected = selectedItem;
+            }, function () {
+                $log.info('Modal dismissed at: ' + new Date());
+            });
         };
     });
