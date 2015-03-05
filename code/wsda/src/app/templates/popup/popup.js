@@ -10,7 +10,7 @@ angular.module('popup',['ui.bootstrap'])
             backdrop: true,
             keyboard: true,
             modalFade: true,
-            templateUrl: 'popup-temp011.html'
+            templateUrl: 'popup-temp01.html'
         };
 
         var modalOptions = {
@@ -57,13 +57,10 @@ angular.module('popup',['ui.bootstrap'])
     .controller('PopupCtrl',
     [   '$scope',
         '$location',
-        '$routeParams',
         '$timeout',
-        'config',
-        'dataService',
         'modalService',
-        function ($scope, $location, $routeParams, $timeout, config,
-                  dataService, modalService) {
+        function ($scope, $location, $timeout,
+                  modalService) {
 
             $scope.deleteCustomer = function () {
 
