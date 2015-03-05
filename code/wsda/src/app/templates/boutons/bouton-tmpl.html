@@ -18,6 +18,12 @@
         <li ng-class="{ active:bouton.isSet(6) }">
             <a href ng-click="bouton.setTab(6)">Popup 02</a>
         </li>
+        <li ng-class="{ active:bouton.isSet(7) }">
+            <a href ng-click="bouton.setTab(7)">Date</a>
+        </li>
+        <li ng-class="{ active:bouton.isSet(8) }">
+            <a href ng-click="bouton.setTab(8)">colapseToggle</a>
+        </li>
     </ul>
 
     <!--  Description Tab'boutons Content  -->
@@ -34,5 +40,9 @@
     <div ng-show="bouton.isSet(5)" ui-view="popup01"></div>
 
     <div ng-show="bouton.isSet(6)" ui-view="popup02"></div>
+
+    <div ng-show="bouton.isSet(7)" ui-view="dateTest"></div>
+
+    <div ng-show="bouton.isSet(8)" ui-view="colapseToggle"></div>
 
 </section>

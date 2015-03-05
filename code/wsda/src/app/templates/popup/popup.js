@@ -10,7 +10,7 @@ angular.module('popup',['ui.bootstrap'])
             backdrop: true,
             keyboard: true,
             modalFade: true,
-            templateUrl: '/app/template/popup/popup-temp01.html'
+            templateUrl: 'popup-temp011.html'
         };
 
         var modalOptions = {
@@ -52,4 +52,36 @@ angular.module('popup',['ui.bootstrap'])
             return $modal.open(tempModalDefaults).result;
         };
 
-    }]);
+    }])
+
+    .controller('PopupCtrl',
+    [   '$scope',
+        '$location',
+        '$routeParams',
+        '$timeout',
+        'config',
+        'dataService',
+        'modalService',
+        function ($scope, $location, $routeParams, $timeout, config,
+                  dataService, modalService) {
+
+            $scope.deleteCustomer = function () {
+
+                var firstName = 'Toto';
+                var lastName = 'Lolo';
+                var custName = firstName + ' ' + lastName;
+
+                var modalOptions = {
+                    closeButtonText: 'Cancel',
+                    actionButtonText: 'Delete Customer',
+                    headerText: 'Delete ' + custName + '?',
+                    bodyText: 'Are you sure you want to delete this customer?'
+                };
+
+                modalService.showModal({}, modalOptions).then(function (result) {
+                    dataService.deleteCustomer($scope.customer.id).then(function () {
+                        $location.path('/customers');
+                    }, processError);
+                });
+            }
+        }]);

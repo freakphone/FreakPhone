@@ -1,7 +1,7 @@
 /**
  * Created by djemi on 14.02.15.
  */
-angular.module('bouton', ['ui.bootstrap', 'popup01', 'popup02'])
+angular.module('bouton', ['popup','popup01', 'popup02', 'dateTest', 'colapseToggle'])
 
     .config(function ($stateProvider) {
     $stateProvider
@@ -21,6 +21,10 @@ angular.module('bouton', ['ui.bootstrap', 'popup01', 'popup02'])
                 'bouton3@boutons' :{
                     templateUrl:'src/app/views/view03-tmpl.html'
                 },
+                'popup@boutons' :{
+                    templateUrl:'src/app/templates/popup/popup-temp01.html',
+                    controller:'PopupCtrl'
+                },
                 'popup01@boutons' :{
                     templateUrl:'src/app/templates/popup/popup-temp02.html',
                     controller:'AccordionDemoCtrl'
@@ -28,6 +32,14 @@ angular.module('bouton', ['ui.bootstrap', 'popup01', 'popup02'])
                 'popup02@boutons' :{
                     templateUrl:'src/app/templates/popup/popup-temp03.html',
                     controller:'ModalDemoCtrl'
+                },
+                'dateTest@boutons' :{
+                    templateUrl:'src/app/templates/popup/dateTest.html',
+                    controller:'DatepickerDemoCtrl'
+                },
+                'colapseToggle@boutons' :{
+                    templateUrl:'src/app/templates/popup/colapseToggle.html',
+                    controller:'CollapseDemoCtrl'
                 }
             }
         })
@@ -46,39 +58,9 @@ angular.module('bouton', ['ui.bootstrap', 'popup01', 'popup02'])
         };
     })
 
-    .controller('PopupCtrl',
-    [   '$scope',
-        '$location',
-        '$routeParams',
-        '$timeout',
-        'config',
-        'dataService',
-        'modalService',
-        function ($scope, $location, $routeParams, $timeout, config,
-                  dataService, modalService) {
-
-            $scope.deleteCustomer = function () {
-
-                var custName = $scope.customer.firstName + ' ' + $scope.customer.lastName;
-
-                var modalOptions = {
-                    closeButtonText: 'Cancel',
-                    actionButtonText: 'Delete Customer',
-                    headerText: 'Delete ' + custName + '?',
-                    bodyText: 'Are you sure you want to delete this customer?'
-                };
-
-                modalService.showModal({}, modalOptions).then(function (result) {
-                    dataService.deleteCustomer($scope.customer.id).then(function () {
-                        $location.path('/customers');
-                    }, processError);
-                });
-            }
-        }])
-
     .controller('ModalDemoCtrl', function ($scope, $modal, $log) {
 
-        $scope.items = ['Jan', 'Enea', 'Djemi']; // peut être fichier json ou db ou xml
+        $scope.items = ['Jan', 'Enea', 'Djemi', 'Cila']; // peut être fichier json ou db ou xml
 
         $scope.open = function (size) {
 

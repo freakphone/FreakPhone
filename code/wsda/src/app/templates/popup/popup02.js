@@ -10,7 +10,7 @@ angular.module('popup02', ['ui.bootstrap']).
 
     $scope.items = items;
     $scope.selected = {
-        item: $scope.items[0]
+        item: $scope.items[2]
     };
 
     $scope.ok = function () {
