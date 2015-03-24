@@ -1,10 +1,34 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+<html ng-app="appSMS">
 
-</body>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>TEST SMS</title>
+        <link rel="stylesheet" type="text/css" href="lib/css/bootstrap.css"/>
+        <link rel="stylesheet" type="text/css" href="lib/css/smsBlocage.css"/>
+    </head>
+
+
+    <body>
+
+        <div class="container-fluid">
+            <h1>Communication Board</h1>
+            <div class="row passed">
+                <div class="list-group-item" ui-view="boutons"></div>
+            </div>
+        </div>
+
+        <!-- Librairies utilisées -->
+        <script type="text/javascript" src="lib/js/angular.js"></script>
+        <script type="text/javascript" src="lib/js/jquery.js"></script>
+        <script type="text/javascript" src="lib/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="lib/js/angular-ui-router.min.js"></script>
+        <script type="text/javascript" src="lib/js/ui-bootstrap-tpls-0.12.1.js"></script>
+
+        <!-- module business-->
+        <script type="text/javascript" src="src/app/view/view.sms.js"></script>
+        <script type="text/javascript" src="src/app/popup/popup.sms.js"></script>
+        <script type="text/javascript" src="src/app/appSMS.js"></script>
+
+    </body>
 </html>

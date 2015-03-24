@@ -1,0 +1,28 @@
+<div ng-controller="ModalCtrl">
+
+    <script type="text/ng-template" id="popupContent.html">
+        <form name="smsForm" ng-submit="sendSms()">
+
+            <!--  SMS Form -->
+            <h4>{{titre}}</h4>
+
+            <fieldset class="form-group">
+                <input ng-pattern="/^\d+$/" ng-minlength="13" ng-maxlength="13" placeholder="0041792013604" type="tel" class="form-control"
+                       title="phoneNumber" ng-model="phoneNumber" required/>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <textarea placeholder="Write a sms to a friend" class="form-control" title="textSms" ng-model="textSms" required></textarea>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <input type="submit" class="btn btn-primary pull-left" value="Send SMS"/>
+                <input type="reset" class="btn btn-primary pull-left" value="Clean SMS"/>
+                <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+            </fieldset>
+
+        </form>
+    </script>
+
+    <button class="btn btn-default" ng-click="open('lt')">Write a sms</button>
+</div>

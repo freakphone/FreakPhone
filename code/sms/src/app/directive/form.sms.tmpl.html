@@ -1,17 +1,6 @@
-<!DOCTYPE html>
-<html ng-app="smsSend">
 
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>TEST SMS</title>
-    <link rel="stylesheet" type="text/css" href="../../../lib/css/bootstrap.css"/>
-    <link rel="stylesheet" type="text/css" href="../../../lib/css/smsBlocage.css"/>
-</head>
-
-
-<body>
 <!--  SMS Form -->
-<form name="smsForm" ng-controller="SmsCtrl as smsCtrl" ng-submit="smsCtrl.sendSms(sms)">
+<form name="smsForm" ng-submit="smsCtrl.sendSms()">
 
     <!--  SMS Form -->
     <h4>{{smsCtrl.titre}}</h4>
@@ -31,15 +20,3 @@
     </fieldset>
 
 </form>
-
-
-<script type="text/javascript" src="../../../lib/js/angular.js"></script>
-<script type="text/javascript" src="../../../lib/js/jquery.js"></script>
-<script type="text/javascript" src="../../../lib/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../../../lib/js/angular-ui-router.min.js"></script>
-<script type="text/javascript" src="../../../lib/js/ui-bootstrap-tpls-0.12.1.js"></script>
-
-<script type="text/javascript" src="sms.form.js"></script>
-
-</body>
-</html>
