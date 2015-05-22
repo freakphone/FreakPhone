@@ -29,3 +29,19 @@ angular.module('appPrime',[
 ------
 fonctionne :
   <div class="container-fluid" ng-include="'app/menus/menus-tmpl.html'"></div>
+  <div class="container-fluid" ui-view></div>
+
+  ------
+
+
+      .run(function($rootScope,$log){
+          $rootScope.log = $log;
+      })
+
+        .controller('MainCtrl', function ($scope) {
+              $scope.categories = '';
+          });
+
+------
+console.log();
+-------

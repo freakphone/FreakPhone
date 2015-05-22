@@ -6,13 +6,11 @@ angular.module('appPrime',[
     'ngAnimate',
     'menus'
 ])
-    .config(function($stateProvider){
+    .config(function($stateProvider, $urlRouterProvider){
         $stateProvider.state('app', {
             url:'/',
             templateUrl: 'app/menus/menus-tmpl.html',
             controller: 'MainCtrl'
         });
-    })
-    .controller('MainCtrl', function ($scope) {
-        $scope.categories = '';
+        $urlRouterProvider.otherwise('/');
     });

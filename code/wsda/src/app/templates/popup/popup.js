@@ -10,8 +10,11 @@ angular.module('popup',['ui.bootstrap'])
             backdrop: true,
             keyboard: true,
             modalFade: true,
-            templateUrl: 'popup-temp01.html'
+            templateUrl: 'src/app/templates/popup/popup-temp01.html'
         };
+
+
+        console.log('modalService');
 
         var modalOptions = {
             closeButtonText: 'Close',
@@ -23,6 +26,7 @@ angular.module('popup',['ui.bootstrap'])
         this.showModal = function (customModalDefaults, customModalOptions) {
             if (!customModalDefaults) customModalDefaults = {};
             customModalDefaults.backdrop = 'static';
+            console.log('showModal');
             return this.show(customModalDefaults, customModalOptions);
         };
 
@@ -36,6 +40,8 @@ angular.module('popup',['ui.bootstrap'])
 
             //Map modal.html $scope custom properties to defaults defined in service
             angular.extend(tempModalOptions, modalOptions, customModalOptions);
+
+            console.log('show');
 
             if (!tempModalDefaults.controller) {
                 tempModalDefaults.controller = function ($scope, $modalInstance) {
@@ -62,8 +68,8 @@ angular.module('popup',['ui.bootstrap'])
         function ($scope, $location, $timeout,
                   modalService) {
 
+            console.log('PopupCtrl');
             $scope.deleteCustomer = function () {
-
                 var firstName = 'Toto';
                 var lastName = 'Lolo';
                 var custName = firstName + ' ' + lastName;
